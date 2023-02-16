@@ -52,7 +52,9 @@ volumes:
     media:
 ```
 
-The image uses a production-optimized `php.ini` file. To customize the PHP settings to your needs it is sufficient to bind-mount a custom `ini` file in the container's `/usr/local/etc/php/conf.d/` directory.
+The image uses the default production-optimized `php.ini` file shipped in the `php` docker image and some settings are overridden by the `100-shopware-requirements-php.ini` file to meet Shopware 6 minimum requirements.
+
+To customize the PHP settings to your needs it is sufficient to bind-mount a custom `ini` file in the container's `/usr/local/etc/php/conf.d/` directory.
 
 E.g.:
 
