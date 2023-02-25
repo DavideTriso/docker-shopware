@@ -1,12 +1,10 @@
-FROM    php:8.1-fpm-alpine
+FROM    php:8.1-cli-alpine
 
 ADD     https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 
 USER    root
 
-RUN     apk --no-cache add \
-            sudo \
-        && chmod +x /usr/local/bin/install-php-extensions \
+RUN     chmod +x /usr/local/bin/install-php-extensions \
         && install-php-extensions \
             apcu \
             gd \
