@@ -4,7 +4,10 @@ ADD     https://github.com/mlocati/docker-php-extension-installer/releases/lates
 
 USER    root
 
-RUN     chmod +x /usr/local/bin/install-php-extensions \
+RUN     apk add --no-cache \
+            git \
+            nano \
+        && chmod +x /usr/local/bin/install-php-extensions \
         && install-php-extensions \
             apcu \
             gd \
