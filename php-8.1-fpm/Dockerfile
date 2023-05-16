@@ -13,7 +13,9 @@ RUN     apk add --no-cache \
             gd \
             intl \
             opcache \
+            opentelemetry \
             pdo_mysql \
+            protobuf \
             xdebug \
             zip \
             @composer-2.4.4 \
