@@ -13,7 +13,9 @@ RUN     apk add --no-cache \
             gd \
             intl \
             opcache \
+            opentelemetry \
             pdo_mysql \
+            protobuf \
             soap \
             xdebug \
             zip \
