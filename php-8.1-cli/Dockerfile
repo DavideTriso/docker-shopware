@@ -14,6 +14,7 @@ RUN     apk add --no-cache \
             intl \
             opcache \
             pdo_mysql \
+            soap \
             xdebug \
             zip \
             @composer-2.4.4 \
