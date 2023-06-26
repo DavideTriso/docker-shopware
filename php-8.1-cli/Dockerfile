@@ -7,6 +7,10 @@ USER    root
 RUN     apk add --no-cache \
             git \
             nano \
+            bash \
+        && curl -1sLf \
+            'https://dl.cloudsmith.io/public/friendsofshopware/stable/setup.alpine.sh' | bash \
+        && apk add --no-cache shopware-cli \
         && chmod +x /usr/local/bin/install-php-extensions \
         && install-php-extensions \
             apcu \
