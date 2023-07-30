@@ -1,13 +1,16 @@
 FROM    php:8.1-cli-alpine
 
-ADD     https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
+ENV     TZ=UTC
 
 USER    root
+
+ADD     https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
 
 RUN     apk add --no-cache \
             git \
             nano \
             bash \
+            tzdata \
         && curl -1sLf \
             'https://dl.cloudsmith.io/public/friendsofshopware/stable/setup.alpine.sh' | bash \
         && apk add --no-cache shopware-cli \
