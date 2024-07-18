@@ -26,7 +26,7 @@ RUN     apk add --no-cache \
             soap \
             xdebug \
             zip \
-            @composer-2.4.4 \
+            @composer \
         && mkdir /usr/local/etc/php/conf.d/disabled \
         && mv /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/disabled \ 
         && mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
